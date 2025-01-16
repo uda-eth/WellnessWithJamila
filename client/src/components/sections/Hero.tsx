@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
@@ -21,37 +22,38 @@ export default function Hero() {
       >
         <div className="flex items-center justify-between">
           <div className="max-w-3xl">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70"
-          >
-            Begin Your Journey to Holistic Wellness
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-muted-foreground mb-8"
-          >
-            Discover transformative healing through trauma-informed programs and personalized wellness services.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex gap-4"
-          >
-            <Link href="/programs">
-              <Button size="lg" className="bg-primary/90 hover:bg-primary">Explore Programs</Button>
-            </Link>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10">
-                Book a Session
-              </Button>
-            </Link>
-          </motion.div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70"
+            >
+              Begin Your Journey to Holistic Wellness
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl text-muted-foreground mb-8"
+            >
+              Discover transformative healing through trauma-informed programs and personalized wellness services.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex gap-4"
+            >
+              <Link href="/programs">
+                <Button size="lg" className="bg-primary/90 hover:bg-primary">Explore Programs</Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="border-primary/20 hover:bg-primary/10">
+                  Book a Session
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
