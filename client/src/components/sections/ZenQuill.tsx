@@ -21,9 +21,9 @@ export default function ZenQuill() {
               <div className="mb-8 cursor-pointer hover:opacity-90 transition-opacity relative w-64 h-64">
                 {!imageError ? (
                   <img 
-                    src="/images/zenquill-hero.jpeg"
+                    src="/ZenQuill_Logo-removebg-preview.png"
                     alt="ZenQuill"
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                    className="w-full h-full object-contain rounded-lg"
                     onError={() => setImageError(true)}
                   />
                 ) : (
