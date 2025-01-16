@@ -12,6 +12,7 @@ import Contact from "@/pages/Contact";
 import DiamondMethodology from "@/pages/DiamondMethodology";
 import HarmonyOfHer from "@/pages/HarmonyOfHer";
 import DivinePressure from "@/pages/DivinePressure";
+import ZenQuill from "@/pages/ZenQuill";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +28,7 @@ function Router() {
           <Route path="/programs/diamond-methodology" component={DiamondMethodology} />
           <Route path="/programs/harmony-of-her" component={HarmonyOfHer} />
           <Route path="/programs/divine-pressure" component={DivinePressure} />
+          <Route path="/zenquill" component={ZenQuill} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
