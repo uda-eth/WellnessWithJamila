@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 
 const programs = [
   {
@@ -24,29 +25,60 @@ const programs = [
 
 export default function Programs() {
   return (
-    <div className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Programs</h2>
+    <div className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      <div className="container mx-auto px-4 relative">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl font-bold text-center mb-12"
+        >
+          Our Programs
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <Link key={program.title} href={program.route}>
-              <Card className="overflow-hidden transition-transform hover:scale-[1.02] cursor-pointer">
-                <div className="aspect-video relative">
-                  <img 
-                    src={program.image} 
-                    alt={program.title}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>{program.title}</CardTitle>
-                  <CardDescription>{program.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            </Link>
+          {programs.map((program, index) => (
+            <motion.div
+              key={program.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <Link href={program.route}>
+                <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <div className="aspect-video relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors z-10" />
+                    <motion.img 
+                      src={program.image} 
+                      alt={program.title}
+                      className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-primary transition-colors">
+                      {program.title}
+                    </CardTitle>
+                    <CardDescription className="group-hover:text-muted-foreground/80 transition-colors">
+                      {program.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Decorative Elements */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.05, scale: 1 }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute top-40 right-0 w-96 h-96 rounded-full bg-primary"
+        style={{ filter: 'blur(100px)' }}
+      />
     </div>
   );
 }
