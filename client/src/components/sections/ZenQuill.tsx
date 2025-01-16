@@ -19,14 +19,14 @@ export default function ZenQuill() {
             className="flex flex-col items-center text-center"
           >
             <div 
-              className="mb-8 cursor-pointer hover:opacity-90 transition-opacity relative w-64 h-64"
+              className="mb-8 cursor-pointer hover:opacity-90 transition-opacity relative w-96 h-96"
               onClick={() => setLocation('/zenquill')}
             >
               {!imageError ? (
                 <img 
                   src="/ZenQuill_Logo-removebg-preview.png"
                   alt="ZenQuill"
-                  className="w-full h-full object-contain rounded-lg"
+                  className="w-full h-full object-contain"
                   onError={() => setImageError(true)}
                 />
               ) : (
