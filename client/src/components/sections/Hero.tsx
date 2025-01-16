@@ -19,7 +19,8 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 py-32 relative z-10"
       >
-        <div className="max-w-3xl">
+        <div className="flex items-center justify-between">
+          <div className="max-w-3xl">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,6 +51,18 @@ export default function Hero() {
                 Book a Session
               </Button>
             </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:block w-96 h-96"
+          >
+            <img
+              src="/images/jamila-profile.jpeg"
+              alt="Jamila Leina"
+              className="w-full h-full object-contain rounded-full"
+            />
           </motion.div>
         </div>
       </motion.div>
