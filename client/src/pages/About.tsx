@@ -5,13 +5,15 @@ export default function About() {
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">About Jamila Leina</h1>
-        
-        <div className="relative mb-12">
-          <img 
-            src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0"
-            alt="Jamila Leina"
-            className="w-full rounded-lg"
-          />
+
+        <div className="relative mb-12 rounded-lg overflow-hidden shadow-xl">
+          <div className="aspect-[4/3]">
+            <img 
+              src="/images/jamila-profile.jpeg"
+              alt="Jamila Leina"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
 
         <Card className="mb-8">
