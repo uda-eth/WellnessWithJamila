@@ -8,6 +8,9 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Programs from "@/pages/Programs";
 import Contact from "@/pages/Contact";
+import DiamondMethodology from "@/pages/DiamondMethodology";
+import HarmonyOfHer from "@/pages/HarmonyOfHer";
+import DivinePressure from "@/pages/DivinePressure";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +22,9 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/programs" component={Programs} />
+          <Route path="/programs/diamond-methodology" component={DiamondMethodology} />
+          <Route path="/programs/harmony-of-her" component={HarmonyOfHer} />
+          <Route path="/programs/divine-pressure" component={DivinePressure} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>

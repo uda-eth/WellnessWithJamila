@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const programs = [
   {
@@ -10,7 +11,8 @@ const programs = [
       "Personal transformation framework",
       "Integrated wellness practices",
       "One-on-one guidance"
-    ]
+    ],
+    route: "/programs/diamond-methodology"
   },
   {
     title: "Harmony of Her",
@@ -20,7 +22,8 @@ const programs = [
       "Emotional healing practices",
       "Community support",
       "Monthly workshops"
-    ]
+    ],
+    route: "/programs/harmony-of-her"
   },
   {
     title: "Divine Pressure",
@@ -30,7 +33,8 @@ const programs = [
       "Energy balancing",
       "Stress relief techniques",
       "Personalized treatment plans"
-    ]
+    ],
+    route: "/programs/divine-pressure"
   }
 ];
 
@@ -54,7 +58,9 @@ export default function Programs() {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full">Learn More</Button>
+              <Link href={program.route}>
+                <Button className="w-full">Learn More</Button>
+              </Link>
             </CardContent>
           </Card>
         ))}

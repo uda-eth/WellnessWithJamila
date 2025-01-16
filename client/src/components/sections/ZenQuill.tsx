@@ -10,7 +10,10 @@ export default function ZenQuill() {
             Experience the power of guided meditations through our exclusive partnership with ZenQuill. 
             Enhance your wellness journey with carefully curated content designed to complement your healing process.
           </p>
-          <Button size="lg">
+          <Button 
+            size="lg"
+            onClick={() => window.open('https://zenquill.ai', '_blank')}
+          >
             Discover ZenQuill Meditations
           </Button>
         </div>
