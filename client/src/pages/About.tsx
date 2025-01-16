@@ -7,11 +7,11 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8">About Jamila Leina</h1>
 
         <div className="relative mb-12 rounded-lg overflow-hidden shadow-xl">
-          <div className="aspect-[4/3]">
+          <div className="relative w-full">
             <img 
               src="/images/jamila-profile.jpeg"
               alt="Jamila Leina"
-              className="object-cover w-full h-full"
+              className="w-full h-auto object-contain rounded-lg"
             />
           </div>
         </div>
