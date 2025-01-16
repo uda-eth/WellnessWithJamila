@@ -17,9 +17,9 @@ export default function ZenQuill() {
             <Link href="/zenquill">
               <a className="mb-8 hover:opacity-90 transition-opacity">
                 <img 
-                  src="/ZenQuill_Logo-removebg-preview.png"
-                  alt="ZenQuill Logo"
-                  className="w-32 h-32 object-contain"
+                  src="/images/zenquill-hero.jpeg"
+                  alt="ZenQuill"
+                  className="w-64 h-64 object-cover rounded-lg shadow-lg"
                 />
               </a>
             </Link>
