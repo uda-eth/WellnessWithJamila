@@ -15,13 +15,13 @@ export default function ZenQuill() {
             className="flex flex-col items-center text-center"
           >
             <Link href="/zenquill">
-              <a className="mb-8 hover:opacity-90 transition-opacity">
+              <motion.div className="mb-8 cursor-pointer hover:opacity-90 transition-opacity">
                 <img 
                   src="/images/zenquill-hero.jpeg"
                   alt="ZenQuill"
                   className="w-64 h-64 object-cover rounded-lg shadow-lg"
                 />
-              </a>
+              </motion.div>
             </Link>
 
             <h2 className="text-3xl font-bold mb-6">ZenQuill Collaboration</h2>
