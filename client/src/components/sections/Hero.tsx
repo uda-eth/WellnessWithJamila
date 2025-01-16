@@ -13,14 +13,7 @@ export default function Hero() {
           opacity: 0.15
         }}
       />
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-col items-center mb-12">
-          <img 
-            src="/images/jamila-logo.jpeg"
-            alt="Jamila Leina Logo"
-            className="w-48 h-auto mb-8"
-          />
-        </div>
+      <div className="container mx-auto px-4 py-24 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-5xl font-bold tracking-tight mb-6">
             Begin Your Journey to Holistic Wellness
